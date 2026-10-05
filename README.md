@@ -7,8 +7,9 @@ program's hot paths as a flame graph or a heat map.
 
 The project started as `yocto-hardened`, a study layer for progressive
 hardening on QEMU. It was renamed when the Jetson target became the main
-line of work. The older branches (`ext4-dm-verity-selinux`,
-`squashfs-selinux-permissive`, `yocto-hpc`) keep their history but are
+line of work. The earlier variants are kept as tags, with their full
+history: `archive/ext4-dm-verity-selinux`,
+`archive/squashfs-selinux-permissive` and `archive/yocto-hpc`. They are
 not maintained against this release.
 
 A `beamfs` branch will be added when beamfs-devel is released publicly.

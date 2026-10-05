@@ -1,0 +1,9 @@
+# External layers this layer is built against, pinned.
+# Other layers (openembedded-core, bitbake, meta-yocto, meta-openembedded,
+# meta-selinux, meta-tegra) follow the base, see README.
+#
+# name        branch   commit                                    url
+meta-ros      wrynose  95c08773cff114b3fe1a8c8f43643e59151bc8db  https://github.com/ros/meta-ros
+meta-zenoh    wrynose  5e662a7b1f0b2eed8357613846005854a02c1d7e  https://github.com/Jarsop/meta-zenoh
+#
+# Base merged from yocto-jetson-tegra-hardened main at 37a5ebde680878c304ad8759f0ac75bd7efc9d59

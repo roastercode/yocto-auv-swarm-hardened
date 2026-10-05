@@ -1,20 +1,26 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: MIT
-"""jetson-follow - suivi en direct d'un build bitbake lance sans terminal.
+"""jetson-follow - live view of a bitbake build started without a terminal.
 
-Sans terminal, bitbake n'ecrit dans son journal qu'au debut et a la fin
-de chaque tache : une compilation d'une heure n'y laisse aucune trace. La
-progression est dans le journal propre de chaque tache
-(tmp/work/.../temp/log.do_*.<pid>). Cet outil affiche les journaux de
-bitbake donnes en argument, puis chaque journal de tache en cours
-d'ecriture, prefixe par la recette et la tache, en suivant les nouvelles
-taches au fur et a mesure.
+Without a terminal, bitbake writes to its log only when a task starts and
+ends: an hour of compilation leaves no trace there. The progress is in
+each task's own log (tmp/work/.../temp/log.do_*.<pid>). This tool shows
+the bitbake logs given as arguments, then every task log being written,
+prefixed with the recipe and the task, following new tasks as they start.
 
-Usage :
-  jetson-follow.py --build BUILDDIR [--build BUILDDIR ...] [LOG ...]
+Usage:
+  jetson-follow.py --build BUILDDIR [--build BUILDDIR ...] [--pid PID] [LOG ...]
 
-Historique :
-  0.1.0  premiere version
+With --pid, the tool stops once process PID has exited (a zombie counts
+as exited): it shows what the logs still hold, then exits 0 if the bitbake
+logs report all tasks succeeded and no ERROR line, 1 otherwise. This is
+the criterion jetson-build.sh --after uses. Without --pid, it runs until
+interrupted.
+
+History:
+  0.2.0  --pid: stop when the build process exits, status from the logs;
+         comments in English
+  0.1.0  first version
 """
 
 import argparse
@@ -23,7 +29,7 @@ import os
 import sys
 import time
 
-VERSION = "0.1.0"
+VERSION = "0.2.0"
 
 
 def label(path):
@@ -60,38 +66,78 @@ def emit(path, offsets, prefix):
     sys.stdout.flush()
 
 
+def alive(pid):
+    """True while pid exists and is not a zombie."""
+    try:
+        with open('/proc/%d/stat' % pid) as f:
+            stat = f.read()
+    except OSError:
+        return False
+    state = stat[stat.rfind(')') + 2:].split(' ', 1)[0]
+    return state != 'Z'
+
+
+def succeeded(logs):
+    """Same criterion as jetson-build.sh --after."""
+    ok = False
+    for p in logs:
+        try:
+            with open(p, 'rb') as f:
+                text = f.read().decode('utf-8', 'replace')
+        except OSError:
+            continue
+        if any(line.startswith('ERROR') for line in text.split('\n')):
+            return False
+        if 'all succeeded' in text:
+            ok = True
+    return ok
+
+
+def poll(args, offsets, followed):
+    for p in args.logs:
+        emit(p, offsets, '')
+    now = time.time()
+    for b in args.build:
+        for p in glob.glob(os.path.join(b, 'tmp', 'work', '*', '*', '*', 'temp', 'log.do_*.*')):
+            if os.path.islink(p):
+                continue
+            if p not in followed:
+                try:
+                    if now - os.path.getmtime(p) > args.window:
+                        continue
+                except OSError:
+                    continue
+                followed.add(p)
+            emit(p, offsets, '[%s] ' % label(p))
+
+
 def main():
-    ap = argparse.ArgumentParser(description='Suivi en direct d\'un build bitbake detache')
-    ap.add_argument('logs', nargs='*', help='journaux bitbake a afficher en entier puis suivre')
-    ap.add_argument('--build', action='append', default=[], help='repertoire de build bitbake')
+    ap = argparse.ArgumentParser(description='Live view of a detached bitbake build')
+    ap.add_argument('logs', nargs='*', help='bitbake logs to show in full, then follow')
+    ap.add_argument('--build', action='append', default=[], help='bitbake build directory')
+    ap.add_argument('--pid', type=int, default=None,
+                    help='stop once this process (the build) has exited')
     ap.add_argument('--window', type=int, default=180,
-                    help='age maximal (s) d\'un journal de tache pour commencer a le suivre')
+                    help='maximum age (s) of a task log to start following it')
     ap.add_argument('--version', action='version', version='%(prog)s ' + VERSION)
     args = ap.parse_args()
 
     offsets = {}
     followed = set()
     while True:
-        for p in args.logs:
-            emit(p, offsets, '')
-        now = time.time()
-        for b in args.build:
-            for p in glob.glob(os.path.join(b, 'tmp', 'work', '*', '*', '*', 'temp', 'log.do_*.*')):
-                if os.path.islink(p):
-                    continue
-                if p not in followed:
-                    try:
-                        if now - os.path.getmtime(p) > args.window:
-                            continue
-                    except OSError:
-                        continue
-                    followed.add(p)
-                emit(p, offsets, '[%s] ' % label(p))
+        running = args.pid is None or alive(args.pid)
+        poll(args, offsets, followed)
+        if not running:
+            ok = succeeded(args.logs)
+            sys.stdout.write('jetson-follow: process %d has exited, build %s\n'
+                             % (args.pid, 'succeeded' if ok else 'FAILED'))
+            sys.stdout.flush()
+            return 0 if ok else 1
         time.sleep(2)
 
 
 if __name__ == '__main__':
     try:
-        main()
+        sys.exit(main())
     except KeyboardInterrupt:
-        pass
+        sys.exit(130)

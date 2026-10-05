@@ -3,16 +3,18 @@
 Hardened operating system for an underwater drone cloud: AUV swarm,
 semi-submersible gateway, unmanned surface vehicle (USV), satellite/cloud link.
 
-Status: design phase. The build will start once the
-[yocto-jetson-tegra-hardened](https://github.com/roastercode/yocto-jetson-tegra-hardened)
-base is finalized.
+Status: layer in place, first build pending. See Status below.
 
 ## Relationship with yocto-jetson-tegra-hardened
 
-Separate repository, distinct project, same foundation. The base is not copied:
-it is consumed as a pinned layer dependency. Fixes to the foundation (hardening,
-kernel analysis tools, CVE tracking) are made in the base and flow down here by
-simply updating the pin.
+This repository is a fork of
+[yocto-jetson-tegra-hardened](https://github.com/roastercode/yocto-jetson-tegra-hardened),
+with its full history merged. Fixes to the base are brought in with:
+
+    git fetch jetson && git merge jetson/main
+
+The layer collection is renamed `auv-swarm-hardened`. It replaces the
+base in `bblayers.conf`: never load both.
 
 ## Architecture
 
@@ -97,6 +99,68 @@ loss with the group exceeds a threshold.
 - **Authentication over short acoustic frames**: an Ed25519 signature (64 bytes)
   often exceeds the payload; replay protection without a reliable clock.
 - **Stealth**: signature of the mast, emissions and propulsion.
+
+## Building
+
+Layers: those of the base (openembedded-core, bitbake, meta-yocto,
+meta-openembedded with meta-oe, meta-python and meta-networking,
+meta-selinux, meta-tegra), this layer instead of the base, and:
+
+- meta-ros: `meta-ros-common`, `meta-ros2`, `meta-ros2-jazzy`;
+- meta-zenoh.
+
+Their commits are pinned in `conf/layers.pin`.
+
+Settings in `conf/local.conf`, as for the base, with:
+
+    DISTRO = "poky-auv-hardened"
+    AUV_PREEMPT_RT = "1"   # default; "0" builds without PREEMPT_RT
+
+Builds go through `bin/jetson-build.sh`, inherited from the base:
+
+    BUILD_DIR=/path/to/build-auv-orin bin/jetson-build.sh auv-swarm-image
+
+A detached build is followed live with `bin/jetson-follow.py`; with
+`--pid`, it stops when the build ends and exits 0 only if it succeeded:
+
+    BUILD_DIR=... nohup bin/jetson-build.sh auv-swarm-image > LOG 2>&1 &
+    bin/jetson-follow.py --build BUILDDIR --pid $! LOG
+
+## What the image carries
+
+- ROS 2 Jazzy (`ros-core` with tf2; not `ros-base`, whose geometry2
+  pulls the bullet physics engine and OpenGL) with `rmw_zenoh_cpp` as middleware, set by
+  `/etc/profile.d/auv-ros.sh`, and the Zenoh router `zenohd`. Zenoh is
+  pinned to 1.8.0, the version rmw_zenoh is validated against upstream,
+  and rmw_zenoh uses it from meta-zenoh rather than vendoring its own.
+- Navigation: gpsd, robot_localization, nmea_navsat_driver.
+- Timing: chrony, linuxptp, pps-tools.
+- Fieldbus: can-utils.
+- The base layer's analysis tooling (development image).
+
+Kernel, on top of the base configuration: PREEMPT_RT, SocketCAN with USB
+CAN adapters, PPS and PTP, USB serial adapters. Every option is checked
+against the final `.config`; a mismatch stops the build.
+
+## Status
+
+`auv-swarm-image` builds for `jetson-agx-orin-devkit`: ext4 root
+filesystem, tegraflash archive, debug symbols, SPDX 3.0 SBOM and CVE
+report. The kernel fragments are checked against the final `.config`.
+Nothing has been flashed or run on a Jetson yet.
+
+Not yet included, each needing its own recipe and tests:
+
+- DTN: a uD3TN recipe (Bundle Protocol v7, SQLite persistent storage).
+- Kernel-enforced EMCON (LSM).
+- Acoustic ROS 2 middleware (rmw_desert): GPL-3.0, and useless without
+  the DESERT framework, which is not packaged.
+
+PREEMPT_RT with NVIDIA's out-of-tree drivers is untested.
+
+## License
+
+MIT, inherited from the base. See `LICENSE`.
 
 ## Version
 

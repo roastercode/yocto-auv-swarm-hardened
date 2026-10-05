@@ -1,0 +1,4 @@
+matmul          21047 ms  (resultat 1887369562)
+sort              514 ms  (resultat 44090696852615111)
+hash             1782 ms  (resultat 37410)
+regex             953 ms  (resultat 1333350)

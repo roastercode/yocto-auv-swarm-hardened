@@ -1,0 +1,6 @@
+# Secrets — ne jamais versionner
+recipes-core/images/credentials.inc
+                                                                                                                                                                                           
+# Artefacts de build
+*.pyc                                                                                                                                                                                      
+__pycache__/

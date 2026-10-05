@@ -1,0 +1,4 @@
+# Activation dm-verity via fragment de config kernel
+FILESEXTRAPATHS:prepend := "${THISDIR}:"
+
+SRC_URI:append = " file://dm-verity.cfg"

@@ -1,0 +1,4 @@
+Linux qemuarm64 6.18.52-yocto-standard #1 SMP PREEMPT Wed Sep 23 03:10:06 UTC 2026 aarch64 GNU/Linux
+4
+perf version 6.18.52
+selinux enforce: 0

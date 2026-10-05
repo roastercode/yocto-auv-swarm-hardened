@@ -1,0 +1,334 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="288" font-family="DejaVu Sans, Verdana, sans-serif" font-size="12">
+<rect width="100%" height="100%" fill="white"/>
+<text x="250" y="26" font-size="17" font-weight="bold">CPU time by function</text>
+<text x="250" y="46" fill="#555">qemuarm64 under QEMU TCG emulation, linux-yocto 6.18.52-yocto-standard, perf cpu-clock at 499 Hz, SELinux permissive (enforcing=0, capture VM only)</text>
+<text x="250" y="64" fill="#555">12118 samples, 100 ms per column</text>
+<rect x="250" y="78" width="900.0" height="22" fill="#f7f7f7"/>
+<text x="242" y="94" text-anchor="end">matmul</text>
+<text x="1160.0" y="94" fill="#333">10498 (86.6%)</text>
+<rect x="250.0" y="78" width="3.7" height="22" fill="#a2130c"><title>matmul, 0.0-0.1 s: 45 samples</title></rect>
+<rect x="253.7" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 0.1-0.2 s: 50 samples</title></rect>
+<rect x="257.4" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 0.2-0.3 s: 50 samples</title></rect>
+<rect x="261.1" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 0.3-0.4 s: 50 samples</title></rect>
+<rect x="264.8" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 0.4-0.5 s: 50 samples</title></rect>
+<rect x="268.4" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 0.5-0.6 s: 50 samples</title></rect>
+<rect x="272.1" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 0.6-0.7 s: 50 samples</title></rect>
+<rect x="275.8" y="78" width="3.7" height="22" fill="#860402"><title>matmul, 0.7-0.8 s: 49 samples</title></rect>
+<rect x="279.5" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 0.8-0.9 s: 50 samples</title></rect>
+<rect x="283.2" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 0.9-1.0 s: 50 samples</title></rect>
+<rect x="286.9" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 1.0-1.1 s: 50 samples</title></rect>
+<rect x="290.6" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 1.1-1.2 s: 50 samples</title></rect>
+<rect x="294.3" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 1.2-1.3 s: 50 samples</title></rect>
+<rect x="298.0" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 1.3-1.4 s: 50 samples</title></rect>
+<rect x="301.6" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 1.4-1.5 s: 50 samples</title></rect>
+<rect x="305.3" y="78" width="3.7" height="22" fill="#860402"><title>matmul, 1.5-1.6 s: 49 samples</title></rect>
+<rect x="309.0" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 1.6-1.7 s: 50 samples</title></rect>
+<rect x="312.7" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 1.7-1.8 s: 50 samples</title></rect>
+<rect x="316.4" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 1.8-1.9 s: 50 samples</title></rect>
+<rect x="320.1" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 1.9-2.0 s: 50 samples</title></rect>
+<rect x="323.8" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 2.0-2.1 s: 50 samples</title></rect>
+<rect x="327.5" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 2.1-2.2 s: 50 samples</title></rect>
+<rect x="331.1" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 2.2-2.3 s: 50 samples</title></rect>
+<rect x="334.8" y="78" width="3.7" height="22" fill="#860402"><title>matmul, 2.3-2.4 s: 49 samples</title></rect>
+<rect x="338.5" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 2.4-2.5 s: 50 samples</title></rect>
+<rect x="342.2" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 2.5-2.6 s: 50 samples</title></rect>
+<rect x="345.9" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 2.6-2.7 s: 50 samples</title></rect>
+<rect x="349.6" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 2.7-2.8 s: 50 samples</title></rect>
+<rect x="353.3" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 2.8-2.9 s: 50 samples</title></rect>
+<rect x="357.0" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 2.9-3.0 s: 50 samples</title></rect>
+<rect x="360.7" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 3.0-3.1 s: 50 samples</title></rect>
+<rect x="364.3" y="78" width="3.7" height="22" fill="#860402"><title>matmul, 3.1-3.2 s: 49 samples</title></rect>
+<rect x="368.0" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 3.2-3.3 s: 50 samples</title></rect>
+<rect x="371.7" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 3.3-3.4 s: 50 samples</title></rect>
+<rect x="375.4" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 3.4-3.5 s: 50 samples</title></rect>
+<rect x="379.1" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 3.5-3.6 s: 50 samples</title></rect>
+<rect x="382.8" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 3.6-3.7 s: 50 samples</title></rect>
+<rect x="386.5" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 3.7-3.8 s: 50 samples</title></rect>
+<rect x="390.2" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 3.8-3.9 s: 50 samples</title></rect>
+<rect x="393.9" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 3.9-4.0 s: 50 samples</title></rect>
+<rect x="397.5" y="78" width="3.7" height="22" fill="#860402"><title>matmul, 4.0-4.1 s: 49 samples</title></rect>
+<rect x="401.2" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 4.1-4.2 s: 50 samples</title></rect>
+<rect x="404.9" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 4.2-4.3 s: 50 samples</title></rect>
+<rect x="408.6" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 4.3-4.4 s: 50 samples</title></rect>
+<rect x="412.3" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 4.4-4.5 s: 50 samples</title></rect>
+<rect x="416.0" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 4.5-4.6 s: 50 samples</title></rect>
+<rect x="419.7" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 4.6-4.7 s: 50 samples</title></rect>
+<rect x="423.4" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 4.7-4.8 s: 50 samples</title></rect>
+<rect x="427.0" y="78" width="3.7" height="22" fill="#860402"><title>matmul, 4.8-4.9 s: 49 samples</title></rect>
+<rect x="430.7" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 4.9-5.0 s: 50 samples</title></rect>
+<rect x="434.4" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 5.0-5.1 s: 50 samples</title></rect>
+<rect x="438.1" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 5.1-5.2 s: 50 samples</title></rect>
+<rect x="441.8" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 5.2-5.3 s: 50 samples</title></rect>
+<rect x="445.5" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 5.3-5.4 s: 50 samples</title></rect>
+<rect x="449.2" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 5.4-5.5 s: 50 samples</title></rect>
+<rect x="452.9" y="78" width="3.7" height="22" fill="#860402"><title>matmul, 5.5-5.6 s: 49 samples</title></rect>
+<rect x="456.6" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 5.6-5.7 s: 50 samples</title></rect>
+<rect x="460.2" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 5.7-5.8 s: 50 samples</title></rect>
+<rect x="463.9" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 5.8-5.9 s: 50 samples</title></rect>
+<rect x="467.6" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 5.9-6.0 s: 50 samples</title></rect>
+<rect x="471.3" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 6.0-6.1 s: 50 samples</title></rect>
+<rect x="475.0" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 6.1-6.2 s: 50 samples</title></rect>
+<rect x="478.7" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 6.2-6.3 s: 50 samples</title></rect>
+<rect x="482.4" y="78" width="3.7" height="22" fill="#860402"><title>matmul, 6.3-6.4 s: 49 samples</title></rect>
+<rect x="486.1" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 6.4-6.5 s: 50 samples</title></rect>
+<rect x="489.8" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 6.5-6.6 s: 50 samples</title></rect>
+<rect x="493.4" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 6.6-6.7 s: 50 samples</title></rect>
+<rect x="497.1" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 6.7-6.8 s: 50 samples</title></rect>
+<rect x="500.8" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 6.8-6.9 s: 50 samples</title></rect>
+<rect x="504.5" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 6.9-7.0 s: 50 samples</title></rect>
+<rect x="508.2" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 7.0-7.1 s: 50 samples</title></rect>
+<rect x="511.9" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 7.1-7.2 s: 50 samples</title></rect>
+<rect x="515.6" y="78" width="3.7" height="22" fill="#860402"><title>matmul, 7.2-7.3 s: 49 samples</title></rect>
+<rect x="519.3" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 7.3-7.4 s: 50 samples</title></rect>
+<rect x="523.0" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 7.4-7.5 s: 50 samples</title></rect>
+<rect x="526.6" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 7.5-7.6 s: 50 samples</title></rect>
+<rect x="530.3" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 7.6-7.7 s: 50 samples</title></rect>
+<rect x="534.0" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 7.7-7.8 s: 50 samples</title></rect>
+<rect x="537.7" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 7.8-7.9 s: 50 samples</title></rect>
+<rect x="541.4" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 7.9-8.0 s: 50 samples</title></rect>
+<rect x="545.1" y="78" width="3.7" height="22" fill="#860402"><title>matmul, 8.0-8.1 s: 49 samples</title></rect>
+<rect x="548.8" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 8.1-8.2 s: 50 samples</title></rect>
+<rect x="552.5" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 8.2-8.3 s: 50 samples</title></rect>
+<rect x="556.1" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 8.3-8.4 s: 50 samples</title></rect>
+<rect x="559.8" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 8.4-8.5 s: 50 samples</title></rect>
+<rect x="563.5" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 8.5-8.6 s: 50 samples</title></rect>
+<rect x="567.2" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 8.6-8.7 s: 50 samples</title></rect>
+<rect x="570.9" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 8.7-8.8 s: 50 samples</title></rect>
+<rect x="574.6" y="78" width="3.7" height="22" fill="#860402"><title>matmul, 8.8-8.9 s: 49 samples</title></rect>
+<rect x="578.3" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 8.9-9.0 s: 50 samples</title></rect>
+<rect x="582.0" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 9.0-9.1 s: 50 samples</title></rect>
+<rect x="585.7" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 9.1-9.2 s: 50 samples</title></rect>
+<rect x="589.3" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 9.2-9.3 s: 50 samples</title></rect>
+<rect x="593.0" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 9.3-9.4 s: 50 samples</title></rect>
+<rect x="596.7" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 9.4-9.5 s: 50 samples</title></rect>
+<rect x="600.4" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 9.5-9.6 s: 50 samples</title></rect>
+<rect x="604.1" y="78" width="3.7" height="22" fill="#860402"><title>matmul, 9.6-9.7 s: 49 samples</title></rect>
+<rect x="607.8" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 9.7-9.8 s: 50 samples</title></rect>
+<rect x="611.5" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 9.8-9.9 s: 50 samples</title></rect>
+<rect x="615.2" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 9.9-10.0 s: 50 samples</title></rect>
+<rect x="618.9" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 10.0-10.1 s: 50 samples</title></rect>
+<rect x="622.5" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 10.1-10.2 s: 50 samples</title></rect>
+<rect x="626.2" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 10.2-10.3 s: 50 samples</title></rect>
+<rect x="629.9" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 10.3-10.4 s: 50 samples</title></rect>
+<rect x="633.6" y="78" width="3.7" height="22" fill="#860402"><title>matmul, 10.4-10.5 s: 49 samples</title></rect>
+<rect x="637.3" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 10.5-10.6 s: 50 samples</title></rect>
+<rect x="641.0" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 10.6-10.7 s: 50 samples</title></rect>
+<rect x="644.7" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 10.7-10.8 s: 50 samples</title></rect>
+<rect x="648.4" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 10.8-10.9 s: 50 samples</title></rect>
+<rect x="652.0" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 10.9-11.0 s: 50 samples</title></rect>
+<rect x="655.7" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 11.0-11.1 s: 50 samples</title></rect>
+<rect x="659.4" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 11.1-11.2 s: 50 samples</title></rect>
+<rect x="663.1" y="78" width="3.7" height="22" fill="#860402"><title>matmul, 11.2-11.3 s: 49 samples</title></rect>
+<rect x="666.8" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 11.3-11.4 s: 50 samples</title></rect>
+<rect x="670.5" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 11.4-11.5 s: 50 samples</title></rect>
+<rect x="674.2" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 11.5-11.6 s: 50 samples</title></rect>
+<rect x="677.9" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 11.6-11.7 s: 50 samples</title></rect>
+<rect x="681.6" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 11.7-11.8 s: 50 samples</title></rect>
+<rect x="685.2" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 11.8-11.9 s: 50 samples</title></rect>
+<rect x="688.9" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 11.9-12.0 s: 50 samples</title></rect>
+<rect x="692.6" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 12.0-12.1 s: 50 samples</title></rect>
+<rect x="696.3" y="78" width="3.7" height="22" fill="#860402"><title>matmul, 12.1-12.2 s: 49 samples</title></rect>
+<rect x="700.0" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 12.2-12.3 s: 50 samples</title></rect>
+<rect x="703.7" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 12.3-12.4 s: 50 samples</title></rect>
+<rect x="707.4" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 12.4-12.5 s: 50 samples</title></rect>
+<rect x="711.1" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 12.5-12.6 s: 50 samples</title></rect>
+<rect x="714.8" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 12.6-12.7 s: 50 samples</title></rect>
+<rect x="718.4" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 12.7-12.8 s: 50 samples</title></rect>
+<rect x="722.1" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 12.8-12.9 s: 50 samples</title></rect>
+<rect x="725.8" y="78" width="3.7" height="22" fill="#860402"><title>matmul, 12.9-13.0 s: 49 samples</title></rect>
+<rect x="729.5" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 13.0-13.1 s: 50 samples</title></rect>
+<rect x="733.2" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 13.1-13.2 s: 50 samples</title></rect>
+<rect x="736.9" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 13.2-13.3 s: 50 samples</title></rect>
+<rect x="740.6" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 13.3-13.4 s: 50 samples</title></rect>
+<rect x="744.3" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 13.4-13.5 s: 50 samples</title></rect>
+<rect x="748.0" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 13.5-13.6 s: 50 samples</title></rect>
+<rect x="751.6" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 13.6-13.7 s: 50 samples</title></rect>
+<rect x="755.3" y="78" width="3.7" height="22" fill="#860402"><title>matmul, 13.7-13.8 s: 49 samples</title></rect>
+<rect x="759.0" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 13.8-13.9 s: 50 samples</title></rect>
+<rect x="762.7" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 13.9-14.0 s: 50 samples</title></rect>
+<rect x="766.4" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 14.0-14.1 s: 50 samples</title></rect>
+<rect x="770.1" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 14.1-14.2 s: 50 samples</title></rect>
+<rect x="773.8" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 14.2-14.3 s: 50 samples</title></rect>
+<rect x="777.5" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 14.3-14.4 s: 50 samples</title></rect>
+<rect x="781.1" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 14.4-14.5 s: 50 samples</title></rect>
+<rect x="784.8" y="78" width="3.7" height="22" fill="#860402"><title>matmul, 14.5-14.6 s: 49 samples</title></rect>
+<rect x="788.5" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 14.6-14.7 s: 50 samples</title></rect>
+<rect x="792.2" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 14.7-14.8 s: 50 samples</title></rect>
+<rect x="795.9" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 14.8-14.9 s: 50 samples</title></rect>
+<rect x="799.6" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 14.9-15.0 s: 50 samples</title></rect>
+<rect x="803.3" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 15.0-15.1 s: 50 samples</title></rect>
+<rect x="807.0" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 15.1-15.2 s: 50 samples</title></rect>
+<rect x="810.7" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 15.2-15.3 s: 50 samples</title></rect>
+<rect x="814.3" y="78" width="3.7" height="22" fill="#860402"><title>matmul, 15.3-15.4 s: 49 samples</title></rect>
+<rect x="818.0" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 15.4-15.5 s: 50 samples</title></rect>
+<rect x="821.7" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 15.5-15.6 s: 50 samples</title></rect>
+<rect x="825.4" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 15.6-15.7 s: 50 samples</title></rect>
+<rect x="829.1" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 15.7-15.8 s: 50 samples</title></rect>
+<rect x="832.8" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 15.8-15.9 s: 50 samples</title></rect>
+<rect x="836.5" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 15.9-16.0 s: 50 samples</title></rect>
+<rect x="840.2" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 16.0-16.1 s: 50 samples</title></rect>
+<rect x="843.9" y="78" width="3.7" height="22" fill="#860402"><title>matmul, 16.1-16.2 s: 49 samples</title></rect>
+<rect x="847.5" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 16.2-16.3 s: 50 samples</title></rect>
+<rect x="851.2" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 16.3-16.4 s: 50 samples</title></rect>
+<rect x="854.9" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 16.4-16.5 s: 50 samples</title></rect>
+<rect x="858.6" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 16.5-16.6 s: 50 samples</title></rect>
+<rect x="862.3" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 16.6-16.7 s: 50 samples</title></rect>
+<rect x="866.0" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 16.7-16.8 s: 50 samples</title></rect>
+<rect x="869.7" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 16.8-16.9 s: 50 samples</title></rect>
+<rect x="873.4" y="78" width="3.7" height="22" fill="#860402"><title>matmul, 16.9-17.0 s: 49 samples</title></rect>
+<rect x="877.0" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 17.0-17.1 s: 50 samples</title></rect>
+<rect x="880.7" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 17.1-17.2 s: 50 samples</title></rect>
+<rect x="884.4" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 17.2-17.3 s: 50 samples</title></rect>
+<rect x="888.1" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 17.3-17.4 s: 50 samples</title></rect>
+<rect x="891.8" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 17.4-17.5 s: 50 samples</title></rect>
+<rect x="895.5" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 17.5-17.6 s: 50 samples</title></rect>
+<rect x="899.2" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 17.6-17.7 s: 50 samples</title></rect>
+<rect x="902.9" y="78" width="3.7" height="22" fill="#860402"><title>matmul, 17.7-17.8 s: 49 samples</title></rect>
+<rect x="906.6" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 17.8-17.9 s: 50 samples</title></rect>
+<rect x="910.2" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 17.9-18.0 s: 50 samples</title></rect>
+<rect x="913.9" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 18.0-18.1 s: 50 samples</title></rect>
+<rect x="917.6" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 18.1-18.2 s: 50 samples</title></rect>
+<rect x="921.3" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 18.2-18.3 s: 50 samples</title></rect>
+<rect x="925.0" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 18.3-18.4 s: 50 samples</title></rect>
+<rect x="928.7" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 18.4-18.5 s: 50 samples</title></rect>
+<rect x="932.4" y="78" width="3.7" height="22" fill="#860402"><title>matmul, 18.5-18.6 s: 49 samples</title></rect>
+<rect x="936.1" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 18.6-18.7 s: 50 samples</title></rect>
+<rect x="939.8" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 18.7-18.8 s: 50 samples</title></rect>
+<rect x="943.4" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 18.8-18.9 s: 50 samples</title></rect>
+<rect x="947.1" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 18.9-19.0 s: 50 samples</title></rect>
+<rect x="950.8" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 19.0-19.1 s: 50 samples</title></rect>
+<rect x="954.5" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 19.1-19.2 s: 50 samples</title></rect>
+<rect x="958.2" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 19.2-19.3 s: 50 samples</title></rect>
+<rect x="961.9" y="78" width="3.7" height="22" fill="#860402"><title>matmul, 19.3-19.4 s: 49 samples</title></rect>
+<rect x="965.6" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 19.4-19.5 s: 50 samples</title></rect>
+<rect x="969.3" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 19.5-19.6 s: 50 samples</title></rect>
+<rect x="973.0" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 19.6-19.7 s: 50 samples</title></rect>
+<rect x="976.6" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 19.7-19.8 s: 50 samples</title></rect>
+<rect x="980.3" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 19.8-19.9 s: 50 samples</title></rect>
+<rect x="984.0" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 19.9-20.0 s: 50 samples</title></rect>
+<rect x="987.7" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 20.0-20.1 s: 50 samples</title></rect>
+<rect x="991.4" y="78" width="3.7" height="22" fill="#860402"><title>matmul, 20.1-20.2 s: 49 samples</title></rect>
+<rect x="995.1" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 20.2-20.3 s: 50 samples</title></rect>
+<rect x="998.8" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 20.3-20.4 s: 50 samples</title></rect>
+<rect x="1002.5" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 20.4-20.5 s: 50 samples</title></rect>
+<rect x="1006.1" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 20.5-20.6 s: 50 samples</title></rect>
+<rect x="1009.8" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 20.6-20.7 s: 50 samples</title></rect>
+<rect x="1013.5" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 20.7-20.8 s: 50 samples</title></rect>
+<rect x="1017.2" y="78" width="3.7" height="22" fill="#7f0000"><title>matmul, 20.8-20.9 s: 50 samples</title></rect>
+<rect x="1020.9" y="78" width="3.7" height="22" fill="#860402"><title>matmul, 20.9-21.0 s: 49 samples</title></rect>
+<rect x="1024.6" y="78" width="3.7" height="22" fill="#f06f46"><title>matmul, 21.0-21.1 s: 29 samples</title></rect>
+<rect x="250" y="102" width="900.0" height="22" fill="#f7f7f7"/>
+<text x="242" y="118" text-anchor="end">sort_values</text>
+<text x="1160.0" y="118" fill="#333">257 (2.1%)</text>
+<rect x="1024.6" y="102" width="3.7" height="22" fill="#fca46f"><title>sort_values, 21.0-21.1 s: 21 samples</title></rect>
+<rect x="1028.3" y="102" width="3.7" height="22" fill="#7f0000"><title>sort_values, 21.1-21.2 s: 50 samples</title></rect>
+<rect x="1032.0" y="102" width="3.7" height="22" fill="#7f0000"><title>sort_values, 21.2-21.3 s: 50 samples</title></rect>
+<rect x="1035.7" y="102" width="3.7" height="22" fill="#7f0000"><title>sort_values, 21.3-21.4 s: 50 samples</title></rect>
+<rect x="1039.3" y="102" width="3.7" height="22" fill="#7f0000"><title>sort_values, 21.4-21.5 s: 50 samples</title></rect>
+<rect x="1043.0" y="102" width="3.7" height="22" fill="#db3b26"><title>sort_values, 21.5-21.6 s: 36 samples</title></rect>
+<rect x="250" y="126" width="900.0" height="22" fill="#f7f7f7"/>
+<text x="242" y="142" text-anchor="end">hash_table</text>
+<text x="1160.0" y="142" fill="#333">882 (7.3%)</text>
+<rect x="1043.0" y="126" width="3.7" height="22" fill="#fee3c0"><title>hash_table, 21.5-21.6 s: 7 samples</title></rect>
+<rect x="1046.7" y="126" width="3.7" height="22" fill="#7f0000"><title>hash_table, 21.6-21.7 s: 50 samples</title></rect>
+<rect x="1050.4" y="126" width="3.7" height="22" fill="#860402"><title>hash_table, 21.7-21.8 s: 49 samples</title></rect>
+<rect x="1054.1" y="126" width="3.7" height="22" fill="#7f0000"><title>hash_table, 21.8-21.9 s: 50 samples</title></rect>
+<rect x="1057.8" y="126" width="3.7" height="22" fill="#7f0000"><title>hash_table, 21.9-22.0 s: 50 samples</title></rect>
+<rect x="1061.5" y="126" width="3.7" height="22" fill="#7f0000"><title>hash_table, 22.0-22.1 s: 50 samples</title></rect>
+<rect x="1065.2" y="126" width="3.7" height="22" fill="#7f0000"><title>hash_table, 22.1-22.2 s: 50 samples</title></rect>
+<rect x="1068.9" y="126" width="3.7" height="22" fill="#7f0000"><title>hash_table, 22.2-22.3 s: 50 samples</title></rect>
+<rect x="1072.5" y="126" width="3.7" height="22" fill="#7f0000"><title>hash_table, 22.3-22.4 s: 50 samples</title></rect>
+<rect x="1076.2" y="126" width="3.7" height="22" fill="#7f0000"><title>hash_table, 22.4-22.5 s: 50 samples</title></rect>
+<rect x="1079.9" y="126" width="3.7" height="22" fill="#860402"><title>hash_table, 22.5-22.6 s: 49 samples</title></rect>
+<rect x="1083.6" y="126" width="3.7" height="22" fill="#7f0000"><title>hash_table, 22.6-22.7 s: 50 samples</title></rect>
+<rect x="1087.3" y="126" width="3.7" height="22" fill="#7f0000"><title>hash_table, 22.7-22.8 s: 50 samples</title></rect>
+<rect x="1091.0" y="126" width="3.7" height="22" fill="#7f0000"><title>hash_table, 22.8-22.9 s: 50 samples</title></rect>
+<rect x="1094.7" y="126" width="3.7" height="22" fill="#7f0000"><title>hash_table, 22.9-23.0 s: 50 samples</title></rect>
+<rect x="1098.4" y="126" width="3.7" height="22" fill="#7f0000"><title>hash_table, 23.0-23.1 s: 50 samples</title></rect>
+<rect x="1102.0" y="126" width="3.7" height="22" fill="#7f0000"><title>hash_table, 23.1-23.2 s: 50 samples</title></rect>
+<rect x="1105.7" y="126" width="3.7" height="22" fill="#7f0000"><title>hash_table, 23.2-23.3 s: 50 samples</title></rect>
+<rect x="1109.4" y="126" width="3.7" height="22" fill="#f67e50"><title>hash_table, 23.3-23.4 s: 27 samples</title></rect>
+<rect x="250" y="150" width="900.0" height="22" fill="#f7f7f7"/>
+<text x="242" y="166" text-anchor="end">parse_lines</text>
+<text x="1160.0" y="166" fill="#333">475 (3.9%)</text>
+<rect x="1109.4" y="150" width="3.7" height="22" fill="#fc9e6a"><title>parse_lines, 23.3-23.4 s: 22 samples</title></rect>
+<rect x="1113.1" y="150" width="3.7" height="22" fill="#7f0000"><title>parse_lines, 23.4-23.5 s: 50 samples</title></rect>
+<rect x="1116.8" y="150" width="3.7" height="22" fill="#7f0000"><title>parse_lines, 23.5-23.6 s: 50 samples</title></rect>
+<rect x="1120.5" y="150" width="3.7" height="22" fill="#7f0000"><title>parse_lines, 23.6-23.7 s: 50 samples</title></rect>
+<rect x="1124.2" y="150" width="3.7" height="22" fill="#7f0000"><title>parse_lines, 23.7-23.8 s: 50 samples</title></rect>
+<rect x="1127.9" y="150" width="3.7" height="22" fill="#7f0000"><title>parse_lines, 23.8-23.9 s: 50 samples</title></rect>
+<rect x="1131.6" y="150" width="3.7" height="22" fill="#7f0000"><title>parse_lines, 23.9-24.0 s: 50 samples</title></rect>
+<rect x="1135.2" y="150" width="3.7" height="22" fill="#860402"><title>parse_lines, 24.0-24.1 s: 49 samples</title></rect>
+<rect x="1138.9" y="150" width="3.7" height="22" fill="#7f0000"><title>parse_lines, 24.1-24.2 s: 50 samples</title></rect>
+<rect x="1142.6" y="150" width="3.7" height="22" fill="#7f0000"><title>parse_lines, 24.2-24.3 s: 50 samples</title></rect>
+<rect x="1146.3" y="150" width="3.7" height="22" fill="#feecd3"><title>parse_lines, 24.3-24.4 s: 4 samples</title></rect>
+<rect x="250" y="174" width="900.0" height="22" fill="#f7f7f7"/>
+<text x="242" y="190" text-anchor="end">other</text>
+<text x="1160.0" y="190" fill="#333">6 (0.0%)</text>
+<rect x="250.0" y="174" width="3.7" height="22" fill="#fee9cd"><title>other, 0.0-0.1 s: 5 samples</title></rect>
+<rect x="1146.3" y="174" width="3.7" height="22" fill="#fff4e6"><title>other, 24.3-24.4 s: 1 samples</title></rect>
+<line x1="250" y1="204" x2="1150.0" y2="204" stroke="#333"/>
+<line x1="250.0" y1="204" x2="250.0" y2="209" stroke="#333"/>
+<text x="250.0" y="222" text-anchor="middle">0</text>
+<line x1="434.4" y1="204" x2="434.4" y2="209" stroke="#333"/>
+<text x="434.4" y="222" text-anchor="middle">5</text>
+<line x1="618.9" y1="204" x2="618.9" y2="209" stroke="#333"/>
+<text x="618.9" y="222" text-anchor="middle">10</text>
+<line x1="803.3" y1="204" x2="803.3" y2="209" stroke="#333"/>
+<text x="803.3" y="222" text-anchor="middle">15</text>
+<line x1="987.7" y1="204" x2="987.7" y2="209" stroke="#333"/>
+<text x="987.7" y="222" text-anchor="middle">20</text>
+<text x="700.0" y="240" text-anchor="middle" fill="#555">time (s)</text>
+<rect x="250.0" y="256" width="4" height="10" fill="#fff4e6"/>
+<rect x="254.0" y="256" width="4" height="10" fill="#fff1e0"/>
+<rect x="258.0" y="256" width="4" height="10" fill="#ffefd9"/>
+<rect x="262.0" y="256" width="4" height="10" fill="#feecd3"/>
+<rect x="266.0" y="256" width="4" height="10" fill="#fee9cd"/>
+<rect x="270.0" y="256" width="4" height="10" fill="#fee6c7"/>
+<rect x="274.0" y="256" width="4" height="10" fill="#fee3c0"/>
+<rect x="278.0" y="256" width="4" height="10" fill="#fee1ba"/>
+<rect x="282.0" y="256" width="4" height="10" fill="#fedeb4"/>
+<rect x="286.0" y="256" width="4" height="10" fill="#fddbae"/>
+<rect x="290.0" y="256" width="4" height="10" fill="#fdd8a7"/>
+<rect x="294.0" y="256" width="4" height="10" fill="#fdd5a1"/>
+<rect x="298.0" y="256" width="4" height="10" fill="#fdd19b"/>
+<rect x="302.0" y="256" width="4" height="10" fill="#fdcb96"/>
+<rect x="306.0" y="256" width="4" height="10" fill="#fdc690"/>
+<rect x="310.0" y="256" width="4" height="10" fill="#fdc08b"/>
+<rect x="314.0" y="256" width="4" height="10" fill="#fdba85"/>
+<rect x="318.0" y="256" width="4" height="10" fill="#fdb580"/>
+<rect x="322.0" y="256" width="4" height="10" fill="#fcaf7a"/>
+<rect x="326.0" y="256" width="4" height="10" fill="#fca975"/>
+<rect x="330.0" y="256" width="4" height="10" fill="#fca46f"/>
+<rect x="334.0" y="256" width="4" height="10" fill="#fc9e6a"/>
+<rect x="338.0" y="256" width="4" height="10" fill="#fc9864"/>
+<rect x="342.0" y="256" width="4" height="10" fill="#fc935f"/>
+<rect x="346.0" y="256" width="4" height="10" fill="#fc8d59"/>
+<rect x="350.0" y="256" width="4" height="10" fill="#f98654"/>
+<rect x="354.0" y="256" width="4" height="10" fill="#f67e50"/>
+<rect x="358.0" y="256" width="4" height="10" fill="#f3774b"/>
+<rect x="362.0" y="256" width="4" height="10" fill="#f06f46"/>
+<rect x="366.0" y="256" width="4" height="10" fill="#ed6842"/>
+<rect x="370.0" y="256" width="4" height="10" fill="#ea603d"/>
+<rect x="374.0" y="256" width="4" height="10" fill="#e75939"/>
+<rect x="378.0" y="256" width="4" height="10" fill="#e45134"/>
+<rect x="382.0" y="256" width="4" height="10" fill="#e14a2f"/>
+<rect x="386.0" y="256" width="4" height="10" fill="#de432b"/>
+<rect x="390.0" y="256" width="4" height="10" fill="#db3b26"/>
+<rect x="394.0" y="256" width="4" height="10" fill="#d83421"/>
+<rect x="398.0" y="256" width="4" height="10" fill="#d32e1e"/>
+<rect x="402.0" y="256" width="4" height="10" fill="#cc2a1b"/>
+<rect x="406.0" y="256" width="4" height="10" fill="#c52619"/>
+<rect x="410.0" y="256" width="4" height="10" fill="#be2316"/>
+<rect x="414.0" y="256" width="4" height="10" fill="#b71f14"/>
+<rect x="418.0" y="256" width="4" height="10" fill="#b01b11"/>
+<rect x="422.0" y="256" width="4" height="10" fill="#a9170f"/>
+<rect x="426.0" y="256" width="4" height="10" fill="#a2130c"/>
+<rect x="430.0" y="256" width="4" height="10" fill="#9b0f0a"/>
+<rect x="434.0" y="256" width="4" height="10" fill="#940c07"/>
+<rect x="438.0" y="256" width="4" height="10" fill="#8d0805"/>
+<rect x="442.0" y="256" width="4" height="10" fill="#860402"/>
+<rect x="446.0" y="256" width="4" height="10" fill="#7f0000"/>
+<text x="238" y="265" fill="#555">1</text>
+<text x="456" y="265" fill="#555">50 samples per cell</text>
+</svg>
